@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Compliment Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 20px;
+      margin: 20px 0;
+      color: #444;
+      min-height: 60px;
+    }
+    button {
+      background: #ff7eb3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ff4f8b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 Compliment Generator 🌟</h1>
+    <p id="compliment">Click the button for a compliment!</p>
+    <button onclick="newCompliment()">Give Me a Compliment</button>
+  </div>
+
+  <script>
+    const compliments = [
+      "You have a great sense of humor!",
+      "Your smile lights up the room.",
+      "You’re like sunshine on a rainy day.",
+      "Your kindness is contagious.",
+      "You have an amazing creative mind.",
+      "You’re doing a great job!",
+      "You inspire people without even knowing.",
+      "You have fantastic taste in style.",
+      "You’re more helpful than you realize.",
+      "You bring out the best in people."
+    ];
+
+    function newCompliment() {
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      document.getElementById("compliment").textContent = compliments[randomIndex];
+    }
+  </script>
+</body>
+</html>
